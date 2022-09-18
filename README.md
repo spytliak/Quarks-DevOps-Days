@@ -20,7 +20,7 @@ Need to create .env file for changing default grafanas password (default is admi
 * [blackbox.yml](/configs/blackbox/blackbox.yml)  - the main config for blackbox (http_2xx)
 * [grafana](/configs/grafana/)                                    - the folder for all grafana configs
 * [datasource.yml](/configs/grafana/provisioning/datasources/datasource.yml)   - the datasources config for grafana
-* [prometheus-blackbox-exporter_rev1.json](/configs/grafana/dashboards/prometheus-blackbox-exporter_rev1.json)                                    - the dashboard for prometheus-blackbox-exporter (ID: 7587)
+* [prometheus-blackbox-exporter_rev1.json](/configs/grafana/dashboards/provisioning/prometheus-blackbox-exporter_rev1.json)                                    - the dashboard for prometheus-blackbox-exporter (ID: 7587)
 * [quarks_grafana-dashboard.json](/configs/grafana/provisioning/dashboards/quarks_grafana-dashboard.json)                                    - the dashboard for prometheus-blackbox-exporter for home work task
 
 
