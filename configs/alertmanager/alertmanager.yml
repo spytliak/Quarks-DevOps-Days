@@ -13,7 +13,7 @@ receivers:
     text: '{{ template "custom_slack_text" . }}'
     username: 'Prometheus'
     channel: '#testa'
-    api_url: 'https://hooks.slack.com/services/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'
+    api_url: 'https://hooks.slack.com/services/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'
 
 templates:
 - /etc/alertmanager/config/notifications.tmpl
