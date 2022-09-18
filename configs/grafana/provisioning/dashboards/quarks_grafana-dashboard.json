@@ -360,7 +360,7 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "probe_http_duration_seconds{target=~\"$target\", phase=~\"$phase\"} - probe_http_duration_seconds{target=~\"$target\", phase=~\"$phase\"} offset 1h",
+          "expr": "probe_http_duration_seconds{target=~\"$target\", phase=~\"$phase\"} - probe_http_duration_seconds{target=~\"$target\", phase=~\"$phase\"} offset 1d",
           "format": "time_series",
           "instant": false,
           "interval": "$interval",
