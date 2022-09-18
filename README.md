@@ -4,7 +4,7 @@ The repository is for Quarks DevOps Days
 The homework is in [README_Task.md](README_Task.md)  
 
 ### Description
-The repo is for creating and configuring the monitoring stack Prometheus-Grafana-BlackboxExporter and the RESTful API application by Docker Compose (for checking).  
+The repo is for creating and configuring the monitoring stack Prometheus-Grafana-BlackboxExporter and the RESTful API application (for checking) by Docker Compose.  
 Need to create .env file for changing default grafanas password (default is admin/admin), an example is in [.env.example](.env.example).
 
 * [docker-compose.yaml](docker-compose.yaml)                      - the main Docker Compose file
