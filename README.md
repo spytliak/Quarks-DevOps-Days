@@ -7,7 +7,7 @@ The homework is in [README_Task.md](README_Task.md)
 The repo is for creating and configuring the monitoring stack Prometheus-Grafana-BlackboxExporter and the RESTful API application by Docker Compose (for checking).  
 Need to create .env file for changing default grafanas password (default is admin/admin), an example is in [.env.example](.env.example).
 
-* [docker-compose.yml](docker-compose.yml)                        - the main Docker Compose file
+* [docker-compose.yaml](docker-compose.yaml)                      - the main Docker Compose file
 * [.env.example](.env.example)                                    - the example .env file
 * [configs](/configs/)                                            - the folder with all configs (grafana, prometheus, alertmanager, blackbox)  
 * [prometheus](/configs/prometheus/)                              - the folder for all prometheus configs
@@ -19,9 +19,9 @@ Need to create .env file for changing default grafanas password (default is admi
 * [blackbox](/configs/blackbox/)                  - the folder for all blackbox configs
 * [blackbox.yml](/configs/blackbox/blackbox.yml)  - the main config for blackbox (http_2xx)
 * [grafana](/configs/grafana/)                                    - the folder for all grafana configs
-* [datasource.yml](/configs/grafana/datasources/datasource.yml)   - the datasources config for grafana
+* [datasource.yml](/configs/grafana/provisioning/datasources/datasource.yml)   - the datasources config for grafana
 * [prometheus-blackbox-exporter_rev1.json](/configs/grafana/dashboards/prometheus-blackbox-exporter_rev1.json)                                    - the dashboard for prometheus-blackbox-exporter (ID: 7587)
-* [quarks_grafana-dashboard.json](/configs/grafana/dashboards/quarks_grafana-dashboard.json)                                    - the dashboard for prometheus-blackbox-exporter for home work task
+* [quarks_grafana-dashboard.json](/configs/grafana/provisioning/dashboards/quarks_grafana-dashboard.json)                                    - the dashboard for prometheus-blackbox-exporter for home work task
 
 
 #### Requirements
