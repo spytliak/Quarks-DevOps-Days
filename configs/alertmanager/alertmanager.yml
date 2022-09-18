@@ -1,0 +1,19 @@
+global:
+  resolve_timeout: 1m
+
+route:
+  receiver: 'slack--notifications'
+
+receivers:
+- name: 'slack--notifications'
+  slack_configs:
+  - send_resolved: true
+    color: '{{ template "slack_color" . }}'
+    title: '{{ template "custom_slack_title" . }}'
+    text: '{{ template "custom_slack_text" . }}'
+    username: 'Prometheus'
+    channel: '#testa'
+    api_url: 'https://hooks.slack.com/services/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'
+
+templates:
+- /etc/alertmanager/config/notifications.tmpl

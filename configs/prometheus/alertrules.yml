@@ -1,0 +1,30 @@
+groups:
+  - name: all
+    rules:
+    - alert: BlackBoxExporterDown
+      expr: probe_success == 0
+      for: 10s
+      labels:
+        alertname: blackboxdown
+        severity: critical
+      annotations:
+        summary: "Exporter (instance {{ $labels.instance }}) down"
+        description: "{{ $labels.instance }} of job {{ $labels.job }} has been down."
+    - alert: PrometheusTargetDown
+      expr: up == 0
+      for: 10s
+      labels:
+        alertname: instancedown
+        severity: critical
+      annotations:
+        summary: "Target {{ $labels.instance }} down"
+        description: "{{ $labels.instance }} of job {{ $labels.job }} has been down."
+    - alert: GuarksSlowProbeDuration 
+      expr: avg_over_time(probe_duration_seconds[1m]) > 2
+      for: 1m
+      labels:
+        alertname: slowprobeduration
+        severity: warning
+      annotations:
+        summary: "Guarks slow probe duration (instance {{ $labels.instance }})"
+        description: "Guarks Blackbox probe duration took more than 2s to complete\n  VALUE = {{ $value }}\n  LABELS: {{ $labels }}"
