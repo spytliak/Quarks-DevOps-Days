@@ -6,8 +6,8 @@ The homework is in [README_Task.md](README_Task.md)
 ### Description
 The repo is for creating and configuring the monitoring stack Prometheus-Grafana-BlackboxExporter and the RESTful API application (for checking) by Docker Compose.  
 NOTE:  
-Need to create .env file for changing default grafanas password (default is admin/admin), an example is in [.env.example](.env.example).  
-Need to change the slack webhook (api_url) in [alertmanager.yml](/configs/alertmanager/alertmanager.yml)  
+* Need to create .env file for changing default grafanas password (default is admin/admin), an example is in [.env.example](.env.example).  
+* Need to change the slack webhook (api_url) in [alertmanager.yml](/configs/alertmanager/alertmanager.yml)  
 
 * [docker-compose.yaml](docker-compose.yaml)                      - the main Docker Compose file
 * [.env.example](.env.example)                                    - the example .env file
