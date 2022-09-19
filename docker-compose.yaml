@@ -40,7 +40,7 @@ services:
     volumes:
       - ./configs/grafana/provisioning:/etc/grafana/provisioning
       - grafana_data:/var/lib/grafana
-    env_file: .env
+    # env_file: .env
     environment:
       - GF_SECURITY_ADMIN_USER=${GF_ADMIN_USER:-admin}
       - GF_SECURITY_ADMIN_PASSWORD=${GF_ADMIN_PASSWORD:-admin}
