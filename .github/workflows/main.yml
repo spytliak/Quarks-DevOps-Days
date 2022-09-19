@@ -1,0 +1,42 @@
+name: Quarks Monitoring stack
+
+on:
+  push: 
+    branches:
+      - ci/cd
+
+jobs:
+  quarks:
+    name: Deploy
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+
+    # Checkout the repository to the GitHub Actions runner
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Check the version of Docker Compose
+    - name: Check Docker Compose
+      continue-on-error: true
+      run: docker-compose version
+    
+    # Deploy monitoring stack by docker-compose
+    - name: Deploy monitoring stack
+      run: docker-compose up -d
+    
+    # Check all containers
+    - name: Check containers
+      run: |
+        docker-compose ps -a
+        docker ps -a
+
+    # Destroy monitoring stack
+    - name: Destroy
+      if: always()
+      run: docker-compose down --volume
