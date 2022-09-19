@@ -4,11 +4,14 @@ on:
   push: 
     branches:
       - ci/cd
+  pull_request:
+    branches:
+    - main
 
 jobs:
   quarks:
     name: Deploy
-    timeout-minutes: 10
+    timeout-minutes: 5
     runs-on: ubuntu-latest
 
     defaults:
@@ -25,11 +28,11 @@ jobs:
     - name: Check Docker Compose
       continue-on-error: true
       run: docker-compose version
-    
+
     # Deploy monitoring stack by docker-compose
     - name: Deploy monitoring stack
       run: docker-compose up -d
-    
+
     # Check all containers
     - name: Check containers
       run: |
