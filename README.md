@@ -1,6 +1,8 @@
 # Quarks-DevOps-Days
 The repository is for Quarks DevOps Days  
 
+[![Quarks Monitoring stack](https://github.com/spytliak/Quarks-DevOps-Days/actions/workflows/main.yml/badge.svg)](https://github.com/spytliak/Quarks-DevOps-Days/actions/workflows/main.yml)
+
 The homework is in [README_Task.md](README_Task.md)  
 
 ### Description
